@@ -1,0 +1,16 @@
+{% extends "subjects/layout.html" %}
+
+{% block body %}
+    <h1>Course {{ student.idstudent }}</h1>
+    <ul>
+        <li>idstudent: {{ student.idstudent }}</li>
+        <li>first: {{ student.first }}</li>
+        <li>last: {{ student.last }}</li>
+        <li>subjects: {{ student.subjects }}</li>
+
+
+    </ul>
+
+
+    <a href="{% url 'course' %}">back to list course</a>
+{% endblock %}

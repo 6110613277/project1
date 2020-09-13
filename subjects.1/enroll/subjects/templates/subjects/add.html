@@ -1,0 +1,16 @@
+{% extends "subjects/layout.html" %}
+
+{% block title %} Enroll Course {% endblock %}
+
+{% block body %}
+<h1>Enrolled</h1>
+<form action="{% url 'add' %}" method="post">
+
+            {{ course.idsubject }}:{{ course.subject }}
+
+        {% empty %}
+        <li>not found</li>
+
+</form>
+ <a href="{% url 'enroll' %}">back</a>
+{% endblock %}
